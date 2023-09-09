@@ -1,0 +1,23 @@
+{% extends 'master.html' %}
+{% block title  %}User Registration{% endblock %}
+{% block body %}
+<div class='container'>
+    <div class='row'>
+    <div class='col-md-6 col-sm-4 col-lg-12 mx-auto'>
+<form method='POST' action='Updated_pass'>
+
+
+    {% csrf_token %}
+    <div class="form-group" >
+        <input type="hidden" value={{emailid}} name='emailid'>
+      <label for='email'>Create new Password</label>
+      <input type="text" class="form-control" id="pass"  placeholder="0000" name='pass'>
+    </div>
+
+    <button type="submit" class="btn btn-primary" name='sub'>Submit</button>
+
+  </form>
+</div>
+</div>
+</div>
+{% endblock  %}

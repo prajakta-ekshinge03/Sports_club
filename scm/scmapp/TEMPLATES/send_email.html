@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+{% block title  %}User Registration{% endblock %}
+{% block body %}
+<div class='container'>
+    <div class='row'>
+    <div class='col-md-6 col-sm-4 col-lg-12 mx-auto'>
+<form method='POST' action='send_email_1'>
+
+
+    {% csrf_token %}
+    <div class="form-group" >
+      <label for='email'>Enter registered email id </label>
+      <input type="email" class="form-control" id="send_email"  placeholder="Eg. mihir@gmail.com" name='email'>
+    </div>
+
+    <button type="submit" class="btn btn-primary" name='sub'>Send Email</button>
+
+  </form>
+</div>
+</div>
+</div>
+{% endblock  %}

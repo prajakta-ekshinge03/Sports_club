@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+{% block title  %}admin home{% endblock %}
+{% load static %}
+{% block body %}
+<h3>Welcome {{name}}</h3>
+<h3 class='txt txt-success'>{{status}}</h3>
+<div class='container'>
+<div class='row'>
+<div class='col-md-6 col-sm-6 col-lg-6 mx-auto'>
+    <a href="admin_event">
+<img src={% static 'user/poster.jpg'%} style="height:300px; width:300px">
+<p>Add/manage Events</p>
+    </a>
+</div>
+
+<div class='col-md-6 col-sm-6 col-lg-6 mx-auto'>
+    <a href="booked_events_admin">
+    <img src={% static 'user/club.jpg'%} style="height:300px; width:300px">
+    <p>Booked Events data</p>
+    </a>
+
+</div>
+</div>
+</div>
+{% endblock  %}

@@ -1,0 +1,40 @@
+{% extends 'master.html' %}
+{% block title  %}Book an event{% endblock %}
+{% block body %}
+<div class='container'>
+<div class='row'>
+<div class='col-md-6 col-sm-4 col-lg-12 mx-auto'>
+    <h3 class='txt txt-success'>{{status}}</h3>
+
+
+
+<table class='table table-hover'>
+    <thead>
+        <tr>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Event Time</th>
+            <th>Event Duration</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in data%}
+        <tr>
+            <td>{{x.event_name}}</td>
+            <td>{{x.event_date}}</td>
+            <td>{{x.event_time}}</td>
+            <td>{{x.duration}}</td>
+            <td><a class='btn btn-danger' href='{% url "event_delete"%}?event_id={{x.event_id}}'>Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="add_event"><button class='btn btn-dark'> Add event</button></a>
+<a href='adminhome'>  <button type="button" class="btn btn-primary mt-4" name='Back' >Back</button>
+</a>
+</div>
+</div>
+</div>
+{% endblock  %}

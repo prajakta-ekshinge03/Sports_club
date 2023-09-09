@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+{% block title  %}User Registration{% endblock %}
+{% block body %}
+<div class='container'>
+    <div class='row'>
+    <div class='col-md-6 col-sm-4 col-lg-12 mx-auto'>
+<form method='POST' action='otp_check'>
+
+
+    {% csrf_token %}
+    <div class="form-group" >
+        <input type="hidden" value={{otp}} name='myotp'>
+        <input type="hidden" value={{emailid}} name='emailid'>
+      <label for='email'>Enter OTP </label>
+      <input type="email" class="form-control" id="send_email"  placeholder="0000" name='otp'>
+    </div>
+
+    <button type="submit" class="btn btn-primary" name='sub'>Verify</button>
+
+  </form>
+</div>
+</div>
+</div>
+{% endblock  %}

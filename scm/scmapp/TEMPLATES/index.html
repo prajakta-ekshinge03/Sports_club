@@ -1,0 +1,80 @@
+{% extends 'master.html' %}
+{% block title  %}Home{% endblock %}
+{% block style%}
+{% load static %}
+<style>
+    .cont{
+        position: relative;
+        display: grid;
+        grid-template-columns: 300px  auto;
+        grid-template-rows: 800px 300px ;
+    
+    
+    }
+    .div1{
+        background-color: #898E8D;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .div2{
+        background-color: #666A69;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .clubimg{
+        opacity:0.6;
+        border-radius: 10px;
+        height: 550px; width: 1100px;
+        margin-top:90px; 
+    }
+    .heading{
+        position: absolute; top:20%; left: 10%;
+        text-align: center; text-shadow: #D9DADA; 
+        font-size: 150px; color:#F1FAED; font-family: 'Barrio', cursive;
+    }
+    .emoji{font-size:20px;
+        color: ;
+        position: absolute; top:24%; left: 91%;
+        padding-right: 10px;}
+    .emoji1{
+        font-size:20px;
+        color:#6E54A4 ;
+        position: absolute; top:32%; left: 94%;
+        padding-right: 10px;
+    }
+    .emoji2{
+        font-size:20px;
+        color: #B18A97;
+        position: absolute; top:28%; left: 94%;
+        padding-right: 10px;
+    }
+    .emoji3{
+        font-size:20px;
+        color: #546EA4;
+        position: absolute; top:36%; left: 94%;
+        padding-right: 10px;
+    }
+    
+    
+    </style>
+
+{% endblock  %}
+
+{% block body %}
+<div class="grid-container cont">
+        
+    <div class="div1">
+        <img src={% static 'user/home.jpg' %} alt="club_image" class="clubimg">
+    </div>
+    <div class="div2">
+        <p class="heading">Mar's Sports</p>
+        
+            <div ><p class="emoji">catch us on</p>
+                <a href="#"><i class="emoji1 fa-brands fa-twitter "></i></a>
+                <a href="#"><i class="emoji2 fa-brands fa-instagram "  href="#"></i></a>
+                <a href="#"><i class="emoji3 fa-brands fa-facebook "  href="#"></i></a>
+            </div>
+           
+    </div>
+</div>
+{% endblock  %}

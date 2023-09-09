@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+{% block title  %}welcome{% endblock %}
+{% load static %}
+{% block body %}
+{{msg}}
+<h3 >Welcome {{name}}</h3>
+
+<div class='container'>
+<div class='row'>
+<div class='col-md-6 col-sm-6 col-lg-6 mx-auto'>
+    <a href="user_show_events">
+<img src={% static 'user/poster.jpg'%} style="height:300px; width:300px">
+<p>Show all upcoming Events</p>
+    </a>
+</div>
+<div class='col-md-6 col-sm-6 col-lg-6 mx-auto'>
+    <a href="book_event">
+    <img src={% static 'user/club.jpg'%} style="height:300px; width:300px">
+    <p>Book an Events</p>
+    </a>
+
+</div>
+</div>
+</div>
+{% endblock  %}
