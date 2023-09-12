@@ -25,7 +25,8 @@ def user_reg_data (request):
         password=request.POST.get('password')
         record=User(name=name, email=email, gender=gender, contact=contact, password=password)
         record.save()
-    return render(request, 'userpage.html')
+        para={"done":"Profile Created!"}
+    return render(request, 'userpage.html', para)
 
 def user_loging(request):
     if request.method=='POST':
@@ -99,7 +100,6 @@ def user_show_events(request):
         return render(request, 'user_show_events.html', para )
 
 def admin_login(request):
-    # if user is already log in then if he refreshes the page ..still he willbe loged in 
     if 'a_name' in request.session:
         para={'name':request.session.get('a_name')}
         return render(request, 'adminhome.html', para)
